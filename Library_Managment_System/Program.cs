@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library_Managment_System
 {
+    
     internal class Program
     {
         static void Main(string[] args)
@@ -57,8 +58,14 @@ namespace Library_Managment_System
                                 string author = Console.ReadLine();
                                 Console.Write("Enter ISBN: ");
                                 int isbn = int.Parse(Console.ReadLine());
-                                Console.Write("Enter Genre: ");
+                                Console.Write("Choose The Genre or Write your own: ");
+                                foreach (Genre g in Enum.GetValues(typeof(Genre)))
+                                {
+                                    Console.Write(g+" - ");
+                                }
+                                Console.WriteLine();
                                 string genre = Console.ReadLine();
+                             
                                 Console.Write("Enter Quantity of Book: ");
                                 int quantity = int.Parse(Console.ReadLine());
 

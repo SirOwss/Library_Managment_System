@@ -7,6 +7,14 @@ using System.Web;
 
 namespace Library_Managment_System
 {
+    public enum Genre
+    {
+        Fiction,
+        NonFiction,
+        Biography,
+        ScienceFiction,
+        Technology // Add more genres as needed
+    }
     internal class Book
     {
         string title;
@@ -66,17 +74,7 @@ namespace Library_Managment_System
             }
         }
 
-        public string Genre
-        {
-            get
-            {
-                return genre;
-            }
-            set
-            {
-                genre = value;
-            }
-        }
+        
 
         public int Quantity
         {
